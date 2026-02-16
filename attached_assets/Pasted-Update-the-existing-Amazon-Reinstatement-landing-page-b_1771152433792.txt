@@ -1,0 +1,58 @@
+Update the existing Amazon Reinstatement landing page by adding a new secondary service focused on Ecommerce Cybersecurity and Website Protection, without changing the current Amazon reinstatement structure or layout.
+
+The Amazon Reinstatement service must remain the primary focus of the website. The new cybersecurity service should be introduced as an additional protection service for ecommerce businesses after recovery or for prevention purposes.
+
+Add the following sections and content:
+
+1. New Service Section (Placed after Amazon Reinstatement Service Section)
+
+Section Title:
+“Ecommerce Cybersecurity & Website Protection”
+
+Section Description:
+Explain that ecommerce businesses and Amazon sellers are frequent targets for hacking, unauthorized access, malware, and account takeovers, and that proactive security helps prevent business disruption and revenue loss.
+
+Include service highlights:
+
+* Ecommerce website security audit
+* Malware and vulnerability scanning
+* Protection against hacking attempts
+* Secure admin and access configuration
+* Shopify and ecommerce platform security hardening
+* Website monitoring and risk prevention
+
+Tone should be professional, reassuring, and security-focused without making unrealistic promises.
+
+2. Protection Positioning Block (Short Section)
+
+Add a transition message connecting both services:
+
+“Recover. Secure. Protect.”
+After helping sellers recover suspended accounts, we help ecommerce businesses secure their stores and systems to prevent future disruptions.
+
+3. Add Cybersecurity to “Why Choose Us” Section
+
+Include additional points:
+
+* Security-first ecommerce approach
+* Confidential handling of business data
+* Focused on protecting online revenue and operations
+
+4. Add FAQ Entries
+
+Include new questions:
+
+* How do I know if my ecommerce website is vulnerable?
+* Do you work with Shopify and other ecommerce platforms?
+* Can security issues lead to account suspension?
+* Do I need cybersecurity if my store is already running fine?
+
+5. Call-To-Action Update
+
+Add an additional CTA button below the cybersecurity section:
+“Get Free Security Review on WhatsApp”
+
+Ensure this integrates visually with the existing design and maintains a clean, premium agency appearance.
+
+Technical Requirements:
+Do not change existing navigation or Amazon reinstatement content. Maintain mobile-first layout, fast loading speed, and high conversion structure for paid traffic.
