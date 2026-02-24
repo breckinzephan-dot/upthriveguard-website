@@ -23,12 +23,17 @@ import {
   Search,
   Monitor,
   Shield,
-  Zap
+  Zap,
+  Quote
 } from "lucide-react";
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 import heroBg from "@/assets/hero-bg.png";
 import trustBadge from "@/assets/trust-badge.png";
 import securityBg from "@/assets/security-bg.png";
+
+import { useLocation } from "wouter";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -45,9 +50,12 @@ const staggerContainer = {
 };
 
 export default function Home() {
+  const [, setLocation] = useLocation();
   const whatsappNumber = "+447482463166";
+  const defaultMessage = encodeURIComponent("Hello, I am looking for a solution for my Amazon account suspension or ecommerce security issue. Can you help me?");
+  
   const scrollToConsult = () => {
-    window.open(`https://wa.me/${whatsappNumber.replace("+", "")}`, "_blank");
+    window.open(`https://wa.me/${whatsappNumber.replace("+", "")}?text=${defaultMessage}`, "_blank");
   };
 
   return (
@@ -123,14 +131,14 @@ export default function Home() {
 
           <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
-              { icon: XCircle, title: "Account Deactivation", desc: "Full account access restoration strategies." },
-              { icon: AlertTriangle, title: "Section 3 Violations", desc: "Code of Conduct & Drop Shipping appeals." },
-              { icon: HelpCircle, title: "Inauthentic Complaints", desc: "Proving authenticity of your inventory." },
-              { icon: ShieldCheck, title: "Related Accounts", desc: "Untangling linked account suspensions." },
-              { icon: FileText, title: "Listing Suspension", desc: "Reinstating blocked ASINs and listings." },
-              { icon: TrendingUp, title: "Appeal Rejected Cases", desc: "Fixing failed appeals from other agencies." },
-              { icon: CheckCircle2, title: "Policy Violations", desc: "IP complaints, review manipulation, etc." },
-              { icon: Clock, title: "Performance Issues", desc: "ODR, LSR, and VTR improvement plans." },
+              { id: "account-deactivation", icon: XCircle, title: "Account Deactivation", desc: "Full account access restoration strategies." },
+              { id: "section-3-violations", icon: AlertTriangle, title: "Section 3 Violations", desc: "Code of Conduct & Drop Shipping appeals." },
+              { id: "inauthentic-complaints", icon: HelpCircle, title: "Inauthentic Complaints", desc: "Proving authenticity of your inventory." },
+              { id: "related-accounts", icon: ShieldCheck, title: "Related Accounts", desc: "Untangling linked account suspensions." },
+              { id: "listing-suspension", icon: FileText, title: "Listing Suspension", desc: "Reinstating blocked ASINs and listings." },
+              { id: "appeal-rejected", icon: TrendingUp, title: "Appeal Rejected Cases", desc: "Fixing failed appeals from other agencies." },
+              { id: "policy-violations", icon: CheckCircle2, title: "Policy Violations", desc: "IP complaints, review manipulation, etc." },
+              { id: "performance-issues", icon: Clock, title: "Performance Issues", desc: "ODR, LSR, and VTR improvement plans." },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -139,14 +147,20 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
               >
-                <Card className="h-full hover:shadow-lg transition-shadow border-none shadow-sm bg-white">
-                  <CardContent className="p-5 sm:p-6 flex flex-col items-start gap-4">
-                    <div className="p-2.5 sm:p-3 rounded-lg bg-blue-50 text-blue-700 shrink-0">
+                <Card 
+                  className="h-full hover:shadow-lg transition-all border-none shadow-sm bg-white cursor-pointer group"
+                  onClick={() => setLocation(`/solution/${item.id}`)}
+                >
+                  <CardContent className="p-5 sm:p-6 flex flex-col items-start gap-4 h-full">
+                    <div className="p-2.5 sm:p-3 rounded-lg bg-blue-50 text-blue-700 shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
                       <item.icon className="h-5 w-5 sm:h-6 sm:w-6" />
                     </div>
                     <div>
                       <h3 className="font-bold text-base sm:text-lg mb-2 text-primary leading-tight">{item.title}</h3>
-                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-4">{item.desc}</p>
+                      <div className="text-xs font-bold text-blue-600 flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Learn More <ArrowRight className="h-3 w-3" />
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -329,6 +343,30 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Reviews Section */}
+      <section className="py-20 bg-slate-50 border-b overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">Real Results for Amazon Sellers</h2>
+            <p className="text-muted-foreground">
+              We have assisted sellers facing account suspensions, listing deactivations, and performance-related issues. Here are examples of reinstatement outcomes and client feedback.
+            </p>
+          </div>
+
+          <ReviewCarousel scrollToConsult={scrollToConsult} />
+
+          <div className="text-center max-w-2xl mx-auto mt-12">
+            <p className="text-[10px] sm:text-xs text-muted-foreground mb-8">
+              Results vary depending on account circumstances. We provide professional appeal strategy and compliance support. Client details are partially redacted for privacy.
+            </p>
+            <Button onClick={scrollToConsult} size="lg" className="w-full sm:w-auto h-14 px-8 bg-green-600 hover:bg-green-700 text-white shadow-lg">
+              <MessageCircle className="mr-2 h-5 w-5" />
+              Get Free Account Review
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-16 md:py-24 bg-secondary/30">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
@@ -396,6 +434,112 @@ export default function Home() {
           Need help? Chat now
         </span>
       </motion.button>
+    </div>
+  );
+}
+
+function ReviewCarousel({ scrollToConsult }: { scrollToConsult: () => void }) {
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 4000 })]);
+
+  const reviews = [
+    {
+      type: "Section 3 Suspension",
+      text: "Our account was suspended under Section 3 and previous appeals were rejected. The appeal strategy provided was structured and compliance-focused. We were reinstated within 7 days.",
+      label: "US Seller",
+      status: "Account Restored"
+    },
+    {
+      type: "Inauthentic Claim",
+      text: "We struggled with inauthentic complaints for weeks. After proper documentation review and appeal submission, our listings were restored.",
+      label: "UK Seller",
+      status: "Reinstated"
+    },
+    {
+      type: "Related Account",
+      text: "Our related account issue was complex. The guidance we received helped us address Amazon’s concerns properly and regain access.",
+      label: "EU Seller",
+      status: "Account Restored"
+    },
+    {
+      type: "Cybersecurity Audit",
+      text: "After a major breach, they hardened our Shopify store and removed malicious scripts. We haven't had a security issue since.",
+      label: "Ecommerce Brand",
+      status: "Secured"
+    },
+    {
+      type: "Malware Removal",
+      text: "Our site was blacklisted by Google due to malware. They cleared the infection and got us back online in 24 hours.",
+      label: "Global Retailer",
+      status: "Cleaned & Protected"
+    },
+    {
+      type: "IP Complaint",
+      text: "Handled multiple IP complaints that were blocking our top-selling ASINs. Very professional and fast service.",
+      label: "CA Seller",
+      status: "Listings Restored"
+    },
+    {
+      type: "Drop Shipping Policy",
+      text: "Expertly navigated a Section 3 drop shipping violation. Their POA was exactly what Amazon needed to see.",
+      label: "US Seller",
+      status: "Reinstated"
+    },
+    {
+      type: "Brand Registry Issues",
+      text: "Helped us fix brand registry access problems that were affecting our advertising. Exceptional support.",
+      label: "EU Brand",
+      status: "Resolved"
+    },
+    {
+      type: "Website Hardening",
+      text: "Implemented advanced security measures for our custom checkout. The peace of mind is worth every penny.",
+      label: "High Volume Seller",
+      status: "Fully Hardened"
+    },
+    {
+      type: "Review Manipulation",
+      text: "Managed a very difficult review manipulation case that we thought was hopeless. Truly experts in Amazon policy.",
+      label: "Global Seller",
+      status: "Reinstated"
+    }
+  ];
+
+  return (
+    <div className="embla overflow-hidden cursor-grab active:cursor-grabbing" ref={emblaRef}>
+      <div className="embla__container flex">
+        {reviews.map((review, i) => (
+          <div key={i} className="embla__slide flex-[0_0_100%] min-w-0 md:flex-[0_0_33.33%] px-4">
+            <Card className="h-full border-none shadow-md bg-white overflow-hidden group hover:shadow-xl transition-all">
+              <div className="h-1.5 bg-primary w-full" />
+              <CardContent className="p-6 flex flex-col h-full">
+                <div className="flex justify-between items-start mb-4">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-1 rounded">
+                    {review.type}
+                  </span>
+                  <div className="flex text-yellow-500 scale-75 origin-right">
+                    {"★★★★★".split("").map((s, i) => <span key={i}>{s}</span>)}
+                  </div>
+                </div>
+                
+                <div className="mb-6 relative">
+                  <Quote className="absolute -top-2 -left-2 h-8 w-8 text-slate-100 -z-0" />
+                  <p className="text-sm italic text-slate-700 leading-relaxed relative z-10">
+                    "{review.text}"
+                  </p>
+                </div>
+                
+                <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
+                  <span className="text-xs font-medium text-slate-500">{review.label}</span>
+                  <span className="flex items-center gap-1 text-xs font-bold text-green-600">
+                    <CheckCircle2 className="h-3 w-3" />
+                    {review.status}
+                  </span>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
