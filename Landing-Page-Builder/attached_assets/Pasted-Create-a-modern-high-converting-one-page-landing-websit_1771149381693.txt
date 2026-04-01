@@ -1,0 +1,77 @@
+Create a modern, high-converting one-page landing website for an Amazon reinstatement and suspension recovery service agency.
+
+The website is focused on helping Amazon sellers who have suspended, deactivated, or restricted accounts recover their selling privileges through professional appeal strategy and account review.
+
+Brand Name: The Upthrive Solution
+
+Target Audience:
+Amazon FBA and Seller Central account owners in the United States, United Kingdom, Canada, and Australia whose accounts or listings have been suspended or deactivated.
+
+Website Goal:
+Convert visitors from TikTok Ads into WhatsApp consultations for a free account review.
+
+Design Style:
+Clean, professional, trustworthy, and premium agency style similar to a $10k/month ecommerce service agency. Use simple layouts, clear typography, and strong call-to-action buttons. Avoid clutter. Mobile-first design is very important.
+
+Structure and Sections:
+
+1. Hero Section (Above the Fold)
+   Headline: “Amazon Account Suspended? Get Expert Reinstatement Help Fast”
+   Subheadline: “We help Amazon sellers recover suspended and deactivated accounts with professional appeal strategies and structured reinstatement support.”
+   Primary CTA Button: “Get Free Account Review on WhatsApp”
+   Add urgency-focused supporting text such as “Don’t submit another wrong appeal.”
+
+2. Problems We Solve Section
+   Create a clean grid showing common Amazon suspension issues:
+
+* Account Deactivation
+* Section 3 Violations
+* Inauthentic Item Complaints
+* Related Account Suspension
+* Listing or ASIN Suspension
+* Appeal Rejected Cases
+* Policy Violations
+* Performance Issues
+
+3. How Our Process Works
+   Show a simple 3-step process:
+   Step 1: Free Account Review
+   Step 2: Appeal Strategy & Plan of Action Creation
+   Step 3: Submission Guidance & Follow-Up
+
+4. Why Choose Us Section
+   Focus on trust and professionalism:
+
+* Experienced with Amazon suspension cases
+* Professional appeal writing
+* Clear communication
+* Fast response time
+* Seller-focused solutions
+
+Do not include unrealistic claims like “guaranteed reinstatement”.
+
+5. Call-To-Action Section
+   Headline: “Stop Losing Sales Due to Suspension”
+   Button: “Chat on WhatsApp Now for Free Review”
+
+6. FAQ Section
+   Include common questions such as:
+
+* How long does reinstatement take?
+* What information do I need to start?
+* Do you work with all marketplaces?
+* What if my appeal was already rejected?
+
+7. Footer
+   Include brand name, contact email, WhatsApp contact button, and short disclaimer stating results depend on Amazon’s final decision.
+
+Technical Requirements:
+
+* Fully mobile optimized
+* Fast loading
+* Sticky WhatsApp button
+* Designed for paid traffic conversion
+* Simple navigation (single page scrolling)
+
+Tone:
+Professional, confident, solution-oriented, and trustworthy. Written for serious Amazon sellers who are losing revenue due to suspension.

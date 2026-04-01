@@ -1,0 +1,31 @@
+Add a new section to the landing page titled “Client Reviews & Reinstatement Results”.
+This section should be placed below the services section and above the final call-to-action.
+Design the section in a clean, professional, trust-building style. It must be fully mobile responsive and visually strong for TikTok traffic.
+Structure Requirements:
+Add a bold headline:
+“Real Results for Amazon Sellers”
+Add a short supporting sentence under the headline:
+“We have assisted sellers facing account suspensions, listing deactivations, and performance-related issues. Here are examples of reinstatement outcomes and client feedback.”
+Add 3–4 Review Cards
+Each card must include:
+Suspension Type (e.g., Section 3 Suspension, Inauthentic Items, Related Account, IP Complaint)
+Short 2–3 sentence testimonial
+Country label (e.g., US Seller, UK Seller, EU Seller)
+5-star rating visual
+Placeholder area for blurred reinstatement confirmation screenshot
+Tag label such as “Reinstated” or “Account Restored”
+Use This Sample Content:
+Case 1 – Section 3 Suspension “Our account was suspended under Section 3 and previous appeals were rejected. The appeal strategy provided was structured and compliance-focused. We were reinstated within 7 days.” – US Seller
+Case 2 – Inauthentic Item Claim “We struggled with inauthentic complaints for weeks. After proper documentation review and appeal submission, our listings were restored.” – UK Seller
+Case 3 – Related Account Suspension “Our related account issue was complex. The guidance we received helped us address Amazon’s concerns properly and regain access.” – EU Seller
+Add a Small Disclaimer Below Reviews:
+“Results vary depending on account circumstances. We provide professional appeal strategy and compliance support. Client details are partially redacted for privacy.”
+Add Strong CTA Below the Section:
+Button text: “Get Free Account Review”
+Button should link to WhatsApp or scroll to contact form.
+Design Requirements:
+Modern, premium layout
+Strong contrast for readability
+Clean spacing
+Fast loading
+Optimized for mobile viewing
